@@ -100,10 +100,10 @@ class KeyboardViewController: UIInputViewController {
         backspaceKey = KeyButton(frame: CGRect(x: CGFloat(width - (editKeyWidth + keySpacing) * 2), y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth, height:editKeyHeight))
         backspaceKey!.addTarget(self, action: Selector("backspaceKeyPressed:"), forControlEvents: .TouchUpInside)
         backspaceKey!.selected = false
-        backspaceKey!.setTitle("🔙", forState: .Normal)
+        backspaceKey!.setImage(UIImage(named:"backspace.png"), forState: .Normal)
         backspaceKey!.backgroundColor = specialKeyBackGroundColorMedium
         backspaceKey!.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        backspaceKey!.titleLabel.font = UIFont(name: "Avenir", size: 20.0)
+        backspaceKey!.titleLabel.font = UIFont(name: "Apple Symbols", size: 20.0)
         self.view.addSubview(backspaceKey)
         
         returnKey = KeyButton(frame: CGRect(x: CGFloat(width - (editKeyWidth + keySpacing)), y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth, height:editKeyHeight))

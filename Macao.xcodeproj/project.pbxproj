@@ -17,6 +17,7 @@
 		012C712D19719E2100F200F9 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C712C19719E2100F200F9 /* KeyButton.swift */; };
 		012C71371971A31D00F200F9 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = 012C71361971A31D00F200F9 /* return.png */; };
 		012C71391971A32600F200F9 /* nextKeyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 012C71381971A32600F200F9 /* nextKeyboard.png */; };
+		016A9810197721E80079F59C /* backspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 016A980F197721E80079F59C /* backspace.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		012C712C19719E2100F200F9 /* KeyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyButton.swift; sourceTree = "<group>"; };
 		012C71361971A31D00F200F9 /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
 		012C71381971A32600F200F9 /* nextKeyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextKeyboard.png; sourceTree = "<group>"; };
+		016A980F197721E80079F59C /* backspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backspace.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				012C71381971A32600F200F9 /* nextKeyboard.png */,
 				012C712119719DF000F200F9 /* KeyboardViewController.swift */,
+				016A980F197721E80079F59C /* backspace.png */,
 				012C712C19719E2100F200F9 /* KeyButton.swift */,
 				012C71361971A31D00F200F9 /* return.png */,
 				012C711F19719DF000F200F9 /* Supporting Files */,
@@ -299,6 +302,7 @@
 			files = (
 				012C71371971A31D00F200F9 /* return.png in Resources */,
 				012C71391971A32600F200F9 /* nextKeyboard.png in Resources */,
+				016A9810197721E80079F59C /* backspace.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +545,7 @@
 				012C711519719DE300F200F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		012C711619719DE300F200F9 /* Build configuration list for PBXNativeTarget "MacaoTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +554,7 @@
 				012C711819719DE300F200F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		012C712819719DF000F200F9 /* Build configuration list for PBXNativeTarget "Prisoner's Keyboard" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +563,7 @@
 				012C712A19719DF000F200F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
