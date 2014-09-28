@@ -19,6 +19,7 @@
 		016A9810197721E80079F59C /* backspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 016A980F197721E80079F59C /* backspace.png */; };
 		0196819319D5D971004953EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0196819219D5D971004953EB /* Main.storyboard */; };
 		0196819519D5DCB5004953EB /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196819419D5DCB5004953EB /* InstructionsViewController.swift */; };
+		0196819719D8B512004953EB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196819619D8B512004953EB /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		016A980F197721E80079F59C /* backspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backspace.png; sourceTree = "<group>"; };
 		0196819219D5D971004953EB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		0196819419D5DCB5004953EB /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		0196819619D8B512004953EB /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				012C70FC19719DE300F200F9 /* AppDelegate.swift */,
 				012C70FE19719DE300F200F9 /* ViewController.swift */,
 				0196819419D5DCB5004953EB /* InstructionsViewController.swift */,
+				0196819619D8B512004953EB /* AboutViewController.swift */,
 				012C710319719DE300F200F9 /* Images.xcassets */,
 				012C70FA19719DE300F200F9 /* Supporting Files */,
 			);
@@ -318,6 +321,7 @@
 			files = (
 				0196819519D5DCB5004953EB /* InstructionsViewController.swift in Sources */,
 				012C70FF19719DE300F200F9 /* ViewController.swift in Sources */,
+				0196819719D8B512004953EB /* AboutViewController.swift in Sources */,
 				012C70FD19719DE300F200F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
