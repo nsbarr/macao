@@ -20,6 +20,10 @@
 		0196819319D5D971004953EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0196819219D5D971004953EB /* Main.storyboard */; };
 		0196819519D5DCB5004953EB /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196819419D5DCB5004953EB /* InstructionsViewController.swift */; };
 		0196819719D8B512004953EB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196819619D8B512004953EB /* AboutViewController.swift */; };
+		01DD45F119D8C0300049416B /* prisoner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01DD45F019D8C0300049416B /* prisoner.jpg */; };
+		01DD45F319D8C4DD0049416B /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD45F219D8C4DD0049416B /* MenuButton.swift */; };
+		01DD45F519D8CBB70049416B /* keaton_thegoat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01DD45F419D8CBB70049416B /* keaton_thegoat.jpg */; };
+		01DD45F719D8CE430049416B /* prisoner.png in Resources */ = {isa = PBXBuildFile; fileRef = 01DD45F619D8CE430049416B /* prisoner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		0196819219D5D971004953EB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		0196819419D5DCB5004953EB /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		0196819619D8B512004953EB /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		01DD45F019D8C0300049416B /* prisoner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = prisoner.jpg; sourceTree = "<group>"; };
+		01DD45F219D8C4DD0049416B /* MenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		01DD45F419D8CBB70049416B /* keaton_thegoat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = keaton_thegoat.jpg; sourceTree = "<group>"; };
+		01DD45F619D8CE430049416B /* prisoner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prisoner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +137,15 @@
 		012C70F919719DE300F200F9 /* Macao */ = {
 			isa = PBXGroup;
 			children = (
+				01DD45F019D8C0300049416B /* prisoner.jpg */,
 				0196819219D5D971004953EB /* Main.storyboard */,
+				01DD45F619D8CE430049416B /* prisoner.png */,
+				01DD45F419D8CBB70049416B /* keaton_thegoat.jpg */,
 				012C70FC19719DE300F200F9 /* AppDelegate.swift */,
 				012C70FE19719DE300F200F9 /* ViewController.swift */,
 				0196819419D5DCB5004953EB /* InstructionsViewController.swift */,
 				0196819619D8B512004953EB /* AboutViewController.swift */,
+				01DD45F219D8C4DD0049416B /* MenuButton.swift */,
 				012C710319719DE300F200F9 /* Images.xcassets */,
 				012C70FA19719DE300F200F9 /* Supporting Files */,
 			);
@@ -290,8 +302,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DD45F119D8C0300049416B /* prisoner.jpg in Resources */,
 				012C710419719DE300F200F9 /* Images.xcassets in Resources */,
+				01DD45F519D8CBB70049416B /* keaton_thegoat.jpg in Resources */,
 				0196819319D5D971004953EB /* Main.storyboard in Resources */,
+				01DD45F719D8CE430049416B /* prisoner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +336,7 @@
 			files = (
 				0196819519D5DCB5004953EB /* InstructionsViewController.swift in Sources */,
 				012C70FF19719DE300F200F9 /* ViewController.swift in Sources */,
+				01DD45F319D8C4DD0049416B /* MenuButton.swift in Sources */,
 				0196819719D8B512004953EB /* AboutViewController.swift in Sources */,
 				012C70FD19719DE300F200F9 /* AppDelegate.swift in Sources */,
 			);

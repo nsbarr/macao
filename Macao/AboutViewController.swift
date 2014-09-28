@@ -15,7 +15,7 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         
         var webview = UIWebView(frame: CGRect(x:0.0, y:0.0, width:self.view.frame.width, height:self.view.frame.height-0.0))
-        let url = "http://www.nsbarr.com/"
+        let url = "http://www.nsbarr.com/about"
         let nsurl = NSURL.URLWithString(url)
         let nsrequest = NSURLRequest(URL: nsurl)
         webview.loadRequest(nsrequest)
@@ -24,7 +24,12 @@ class AboutViewController: UIViewController {
         
     }
     
+    @IBOutlet var whut: UIBarButtonItem
     
+    
+    @IBAction func whut(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("about-popsegue", sender: self)
+    }
  
     
     override func didReceiveMemoryWarning() {

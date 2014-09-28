@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         self.view = UIView(frame: UIScreen.mainScreen().applicationFrame)
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationItem.hidesBackButton = true
-        
+        self.navigationController.navigationBarHidden = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
     }
     
@@ -25,32 +25,34 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        var imageView = UIImageView(frame: UIScreen.mainScreen().bounds)
+        let theImage = UIImage(named: "keaton_thegoat.jpg")
+        imageView.image = theImage
+        imageView.clipsToBounds = true
+        self.view.addSubview(imageView)
+        
+        var darkenView = UIView(frame: UIScreen.mainScreen().bounds)
+        darkenView.backgroundColor = UIColor.blackColor()
+        darkenView.alpha = 0.5
+        self.view.addSubview(darkenView)
         
         
-        
-        var aboutButton = UIButton(frame: CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height-80.0))
+        var aboutButton = MenuButton(frame: CGRect(x:(self.view.frame.width-200)/2,y:self.view.frame.height/2+40,width:200,height:40))
         aboutButton.addTarget(self, action: Selector("aboutButtonPressed:"), forControlEvents: .TouchUpInside)
         aboutButton.setTitle("About", forState: .Normal)
-        aboutButton.titleLabel.font = UIFont(name: "Avenir", size: 20.0)
-        aboutButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         self.view.addSubview(aboutButton)
         
         
         
-        var instructionsButton = UIButton(frame: CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height))
+        var instructionsButton = MenuButton(frame: CGRect(x:(self.view.frame.width-200)/2,y:self.view.frame.height/2+100,width:200,height:40))
         instructionsButton.addTarget(self, action: Selector("instructionsButtonPressed:"), forControlEvents: .TouchUpInside)
-        instructionsButton.setTitle("Instructions", forState: .Normal)
-        instructionsButton.titleLabel.font = UIFont(name: "Avenir", size: 20.0)
-        instructionsButton.setTitleColor(UIColor.redColor(), forState: .Normal)
+        instructionsButton.setTitle("How to Install", forState: .Normal)
         self.view.addSubview(instructionsButton)
         
-        var submitButton = UIButton(frame: CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height+80.0))
+        var submitButton = MenuButton(frame: CGRect(x:(self.view.frame.width-200)/2,y:self.view.frame.height/2+160,width:200,height:40))
         submitButton.addTarget(self, action: Selector("instructionsButtonPressed:"), forControlEvents: .TouchUpInside)
         submitButton.setTitle("Submit Your Work", forState: .Normal)
-        submitButton.titleLabel.font = UIFont(name: "Avenir", size: 20.0)
-        submitButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         self.view.addSubview(submitButton)
-        
         
         
         
