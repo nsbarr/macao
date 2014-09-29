@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0109D7CA19D9B859003DA7D8 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0109D7C919D9B859003DA7D8 /* SubmitViewController.swift */; };
 		012C70FD19719DE300F200F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C70FC19719DE300F200F9 /* AppDelegate.swift */; };
 		012C70FF19719DE300F200F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C70FE19719DE300F200F9 /* ViewController.swift */; };
 		012C710419719DE300F200F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012C710319719DE300F200F9 /* Images.xcassets */; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0109D7C919D9B859003DA7D8 /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		012C70F719719DE300F200F9 /* Macao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012C70FB19719DE300F200F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012C70FC19719DE300F200F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				01DD45F619D8CE430049416B /* prisoner.png */,
 				01DD45F419D8CBB70049416B /* keaton_thegoat.jpg */,
 				012C70FC19719DE300F200F9 /* AppDelegate.swift */,
+				0109D7C919D9B859003DA7D8 /* SubmitViewController.swift */,
 				012C70FE19719DE300F200F9 /* ViewController.swift */,
 				0196819419D5DCB5004953EB /* InstructionsViewController.swift */,
 				0196819619D8B512004953EB /* AboutViewController.swift */,
@@ -338,6 +341,7 @@
 				012C70FF19719DE300F200F9 /* ViewController.swift in Sources */,
 				01DD45F319D8C4DD0049416B /* MenuButton.swift in Sources */,
 				0196819719D8B512004953EB /* AboutViewController.swift in Sources */,
+				0109D7CA19D9B859003DA7D8 /* SubmitViewController.swift in Sources */,
 				012C70FD19719DE300F200F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
