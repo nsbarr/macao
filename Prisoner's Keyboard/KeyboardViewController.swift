@@ -10,6 +10,8 @@ import UIKit
 import QuartzCore
 
 class KeyboardViewController: UIInputViewController {
+
+    
     let rows = [["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
         ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
         ["z", "x", "c", "v", "b", "n", "m"]]
@@ -44,14 +46,15 @@ class KeyboardViewController: UIInputViewController {
     
     
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-    }
+   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+       super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+   
+   }
 
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+   required init(coder aDecoder: NSCoder) {
+       fatalError("init(coder:) has not been implemented")
+   }
+
     
     override func updateViewConstraints() {
         super.updateViewConstraints()

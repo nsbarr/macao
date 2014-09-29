@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 class KeyButton: UIButton {
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
     override init(frame: CGRect)  {
         super.init(frame: frame)
         var buttonLabel = self.titleLabel!
@@ -30,7 +36,5 @@ class KeyButton: UIButton {
         self.contentHorizontalAlignment = .Center
     }
 
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }

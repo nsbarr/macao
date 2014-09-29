@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		0109D7CA19D9B859003DA7D8 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0109D7C919D9B859003DA7D8 /* SubmitViewController.swift */; };
 		0109D7CC19D9C732003DA7D8 /* keaton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0109D7CB19D9C732003DA7D8 /* keaton2.png */; };
+		0109D7D819D9D473003DA7D8 /* Prisoner's Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 012C711D19719DF000F200F9 /* Prisoner's Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		012C70FD19719DE300F200F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C70FC19719DE300F200F9 /* AppDelegate.swift */; };
 		012C70FF19719DE300F200F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C70FE19719DE300F200F9 /* ViewController.swift */; };
 		012C710419719DE300F200F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012C710319719DE300F200F9 /* Images.xcassets */; };
 		012C711019719DE300F200F9 /* MacaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C710F19719DE300F200F9 /* MacaoTests.swift */; };
 		012C712219719DF000F200F9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C712119719DF000F200F9 /* KeyboardViewController.swift */; };
-		012C712519719DF000F200F9 /* Prisoner's Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 012C711D19719DF000F200F9 /* Prisoner's Keyboard.appex */; };
 		012C712D19719E2100F200F9 /* KeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C712C19719E2100F200F9 /* KeyButton.swift */; };
 		012C71371971A31D00F200F9 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = 012C71361971A31D00F200F9 /* return.png */; };
 		012C71391971A32600F200F9 /* nextKeyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 012C71381971A32600F200F9 /* nextKeyboard.png */; };
@@ -29,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0109D7D319D9D1BD003DA7D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 012C70EF19719DE300F200F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 012C711C19719DF000F200F9;
+			remoteInfo = "Prisoner's Keyboard";
+		};
 		012C710A19719DE300F200F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 012C70EF19719DE300F200F9 /* Project object */;
@@ -36,30 +43,16 @@
 			remoteGlobalIDString = 012C70F619719DE300F200F9;
 			remoteInfo = Macao;
 		};
-		012C712319719DF000F200F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 012C70EF19719DE300F200F9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 012C711C19719DF000F200F9;
-			remoteInfo = "Prisoner's Keyboard";
-		};
-		012C712619719DF000F200F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 012C70EF19719DE300F200F9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 012C711C19719DF000F200F9;
-			remoteInfo = "Prisoner's Keyboard";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		012C712B19719DF000F200F9 /* Embed App Extensions */ = {
+		0109D7D519D9D1BD003DA7D8 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				012C712519719DF000F200F9 /* Prisoner's Keyboard.appex in Embed App Extensions */,
+				0109D7D819D9D473003DA7D8 /* Prisoner's Keyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,13 +207,12 @@
 				012C70F319719DE300F200F9 /* Sources */,
 				012C70F419719DE300F200F9 /* Frameworks */,
 				012C70F519719DE300F200F9 /* Resources */,
-				012C712B19719DF000F200F9 /* Embed App Extensions */,
+				0109D7D519D9D1BD003DA7D8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				012C712419719DF000F200F9 /* PBXTargetDependency */,
-				012C712719719DF000F200F9 /* PBXTargetDependency */,
+				0109D7D419D9D1BD003DA7D8 /* PBXTargetDependency */,
 			);
 			name = Macao;
 			productName = Macao;
@@ -273,6 +265,7 @@
 				TargetAttributes = {
 					012C70F619719DE300F200F9 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 3RA98GNA2A;
 					};
 					012C710819719DE300F200F9 = {
 						CreatedOnToolsVersion = 6.0;
@@ -280,6 +273,7 @@
 					};
 					012C711C19719DF000F200F9 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 3RA98GNA2A;
 					};
 				};
 			};
@@ -370,20 +364,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0109D7D419D9D1BD003DA7D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 012C711C19719DF000F200F9 /* Prisoner's Keyboard */;
+			targetProxy = 0109D7D319D9D1BD003DA7D8 /* PBXContainerItemProxy */;
+		};
 		012C710B19719DE300F200F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 012C70F619719DE300F200F9 /* Macao */;
 			targetProxy = 012C710A19719DE300F200F9 /* PBXContainerItemProxy */;
-		};
-		012C712419719DF000F200F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 012C711C19719DF000F200F9 /* Prisoner's Keyboard */;
-			targetProxy = 012C712319719DF000F200F9 /* PBXContainerItemProxy */;
-		};
-		012C712719719DF000F200F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 012C711C19719DF000F200F9 /* Prisoner's Keyboard */;
-			targetProxy = 012C712619719DF000F200F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -472,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Macao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Macao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -526,6 +517,7 @@
 		012C712919719DF000F200F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -540,6 +532,7 @@
 		012C712A19719DF000F200F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Prisoner's Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
