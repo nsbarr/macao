@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0109D7CA19D9B859003DA7D8 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0109D7C919D9B859003DA7D8 /* SubmitViewController.swift */; };
+		0109D7CC19D9C732003DA7D8 /* keaton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0109D7CB19D9C732003DA7D8 /* keaton2.png */; };
 		012C70FD19719DE300F200F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C70FC19719DE300F200F9 /* AppDelegate.swift */; };
 		012C70FF19719DE300F200F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C70FE19719DE300F200F9 /* ViewController.swift */; };
 		012C710419719DE300F200F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012C710319719DE300F200F9 /* Images.xcassets */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		0109D7C919D9B859003DA7D8 /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
+		0109D7CB19D9C732003DA7D8 /* keaton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keaton2.png; sourceTree = "<group>"; };
 		012C70F719719DE300F200F9 /* Macao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012C70FB19719DE300F200F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012C70FC19719DE300F200F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				012C70FC19719DE300F200F9 /* AppDelegate.swift */,
 				0109D7C919D9B859003DA7D8 /* SubmitViewController.swift */,
 				012C70FE19719DE300F200F9 /* ViewController.swift */,
+				0109D7CB19D9C732003DA7D8 /* keaton2.png */,
 				0196819419D5DCB5004953EB /* InstructionsViewController.swift */,
 				0196819619D8B512004953EB /* AboutViewController.swift */,
 				01DD45F219D8C4DD0049416B /* MenuButton.swift */,
@@ -309,6 +312,7 @@
 				012C710419719DE300F200F9 /* Images.xcassets in Resources */,
 				01DD45F519D8CBB70049416B /* keaton_thegoat.jpg in Resources */,
 				0196819319D5D971004953EB /* Main.storyboard in Resources */,
+				0109D7CC19D9C732003DA7D8 /* keaton2.png in Resources */,
 				01DD45F719D8CE430049416B /* prisoner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         var imageView = UIImageView(frame: UIScreen.mainScreen().bounds)
-        let theImage = UIImage(named: "keaton_thegoat.jpg")
+        let theImage = UIImage(named: "keaton2.png")
         imageView.image = theImage
         imageView.clipsToBounds = true
         self.view.addSubview(imageView)
