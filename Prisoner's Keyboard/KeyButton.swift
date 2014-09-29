@@ -10,16 +10,16 @@ import Foundation
 import UIKit
 
 class KeyButton: UIButton {
-    init(frame: CGRect)  {
+    override init(frame: CGRect)  {
         super.init(frame: frame)
-        
-        self.titleLabel.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 26.0)
-        self.titleLabel.textAlignment = .Center
+        var buttonLabel = self.titleLabel!
+        buttonLabel.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 26.0)
+        buttonLabel.textAlignment = .Center
         self.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         self.setTitleColor(UIColor.whiteColor(), forState: .Normal | .Highlighted)
         self.setTitleColor(UIColor.blackColor(), forState: .Selected)
         self.setTitleColor(UIColor.blackColor(), forState: .Selected | .Highlighted)
-        self.titleLabel.sizeToFit()
+        buttonLabel.sizeToFit()
         
         self.layer.borderWidth = 0.5
         self.layer.borderColor = UIColor.blackColor().CGColor
@@ -28,5 +28,9 @@ class KeyButton: UIButton {
         self.backgroundColor = UIColor.blackColor()
         self.contentVerticalAlignment = .Center
         self.contentHorizontalAlignment = .Center
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

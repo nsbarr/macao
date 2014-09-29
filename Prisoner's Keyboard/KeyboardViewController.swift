@@ -44,9 +44,13 @@ class KeyboardViewController: UIInputViewController {
     
     
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func updateViewConstraints() {
@@ -69,9 +73,9 @@ class KeyboardViewController: UIInputViewController {
         editKey!.selected = false
         editKey!.setTitle("🔒", forState: .Normal)
         editKey!.setTitle("🔓 Tap letters to lock & unlock them", forState: .Selected)
-        editKey!.titleLabel.font = UIFont(name: "Avenir", size: 20.0)
+        editKey!.titleLabel!.font = UIFont(name: "Avenir", size: 20.0)
         editKey!.backgroundColor = specialKeyBackGroundColorLight
-        self.view.addSubview(editKey)
+        self.view.addSubview(editKey!)
         //[myButton setBackgroundImage:[self imageWithColor:[UIColor greenColor]] forState:UIControlStateHighlighted];
 
         
@@ -82,9 +86,9 @@ class KeyboardViewController: UIInputViewController {
         //nextKeyboardKey!.setImage(UIImage(named:"nextKeyboard.png"), forState: .Normal)
         nextKeyboardKey!.setTitle("🌐", forState: .Normal)
         nextKeyboardKey!.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        nextKeyboardKey!.titleLabel.font = UIFont(name: "AppleColorEmoji", size: 20)
+        nextKeyboardKey!.titleLabel!.font = UIFont(name: "AppleColorEmoji", size: 20)
         nextKeyboardKey!.backgroundColor = specialKeyBackGroundColorMedium
-        self.view.addSubview(nextKeyboardKey)
+        self.view.addSubview(nextKeyboardKey!)
         
         
         spaceKey = KeyButton(frame: CGRect(x: CGFloat(10.0 + ((editKeyWidth + keySpacing) * 2)), y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth * 2.5, height:editKeyHeight))
@@ -93,7 +97,7 @@ class KeyboardViewController: UIInputViewController {
         spaceKey!.setTitle("", forState: .Normal)
         spaceKey!.backgroundColor = specialKeyBackGroundColorDark
         
-        self.view.addSubview(spaceKey)
+        self.view.addSubview(spaceKey!)
         
         
         
@@ -103,8 +107,8 @@ class KeyboardViewController: UIInputViewController {
         backspaceKey!.setImage(UIImage(named:"backspace.png"), forState: .Normal)
         backspaceKey!.backgroundColor = specialKeyBackGroundColorMedium
         backspaceKey!.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        backspaceKey!.titleLabel.font = UIFont(name: "Apple Symbols", size: 20.0)
-        self.view.addSubview(backspaceKey)
+        backspaceKey!.titleLabel!.font = UIFont(name: "Apple Symbols", size: 20.0)
+        self.view.addSubview(backspaceKey!)
         
         returnKey = KeyButton(frame: CGRect(x: CGFloat(width - (editKeyWidth + keySpacing)), y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth, height:editKeyHeight))
         returnKey!.addTarget(self, action: Selector("returnKeyPressed:"), forControlEvents: .TouchUpInside)
@@ -113,8 +117,8 @@ class KeyboardViewController: UIInputViewController {
         returnKey!.setTitleColor(UIColor.blackColor(), forState: .Normal)
         returnKey!.backgroundColor = specialKeyBackGroundColorLight
         //returnKey!.setImage(UIImage(named:"return.png"), forState: .Normal)
-        returnKey!.titleLabel.font = UIFont(name: "Avenir", size: 20.0)
-        self.view.addSubview(returnKey)
+        returnKey!.titleLabel!.font = UIFont(name: "Avenir", size: 20.0)
+        self.view.addSubview(returnKey!)
         
         
         
@@ -164,7 +168,7 @@ class KeyboardViewController: UIInputViewController {
                 UIView.commitAnimations()
                 
                 var proxy = self.textDocumentProxy as UITextDocumentProxy
-                proxy.insertText(sender.titleLabel.text.lowercaseString)
+                proxy.insertText(sender.titleLabel!.text!.lowercaseString)
             }
         }
         else {
@@ -176,8 +180,8 @@ class KeyboardViewController: UIInputViewController {
     func editKeyPressed(sender: UIButton) {
         editKey!.selected = !editKey!.selected
         if (editKey!.selected) {
-            self.view.bringSubviewToFront(editKey)
-            editKey!.titleLabel.font = UIFont(name: "Avenir", size: 14.0)
+            self.view.bringSubviewToFront(editKey!)
+            editKey!.titleLabel!.font = UIFont(name: "Avenir", size: 14.0)
             editKey!.frame.size.width = self.view.frame.size.width - 2
             for button in buttons {
                 button.setTitleColor(UIColor.grayColor(), forState: .Selected)
@@ -188,7 +192,7 @@ class KeyboardViewController: UIInputViewController {
 
         else {
             editKey!.frame.size.width = editKeyWidth
-            editKey!.titleLabel.font = UIFont(name: "Avenir", size: 20.0)
+            editKey!.titleLabel!.font = UIFont(name: "Avenir", size: 20.0)
             for button in buttons {
                 button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
                 button.setTitleColor(UIColor.whiteColor(), forState: .Normal | .Highlighted)

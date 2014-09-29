@@ -10,16 +10,16 @@ import Foundation
 import UIKit
 
 class MenuButton: UIButton {
-    init(frame: CGRect)  {
+    override init(frame: CGRect)  {
         super.init(frame: frame)
         
-        self.titleLabel.font = UIFont(name: "Avenir", size: 18.0)
-        self.titleLabel.textAlignment = .Center
+        self.titleLabel!.font = UIFont(name: "Avenir", size: 18.0)
+        self.titleLabel!.textAlignment = .Center
         self.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         self.setTitleColor(UIColor.whiteColor(), forState: .Normal | .Highlighted)
         self.setTitleColor(UIColor.blackColor(), forState: .Selected)
         self.setTitleColor(UIColor.blackColor(), forState: .Selected | .Highlighted)
-        self.titleLabel.sizeToFit()
+        self.titleLabel!.sizeToFit()
         
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.whiteColor().CGColor
@@ -30,6 +30,11 @@ class MenuButton: UIButton {
         self.backgroundColor = bgColor
         self.contentVerticalAlignment = .Center
         self.contentHorizontalAlignment = .Center
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        //fatalError("init(coder:) has not been implemented")
     }
         
         

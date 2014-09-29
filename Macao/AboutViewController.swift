@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class AboutViewController: UIViewController {
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +29,7 @@ class AboutViewController: UIViewController {
         
     }
     
-    @IBOutlet var whut: UIBarButtonItem
+    @IBOutlet var whut: UIBarButtonItem!
     
     
     @IBAction func whut(sender: UIBarButtonItem) {

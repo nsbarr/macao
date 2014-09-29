@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         self.view = UIView(frame: UIScreen.mainScreen().applicationFrame)
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationItem.hidesBackButton = true
-        self.navigationController.navigationBarHidden = true
+        self.navigationController!.navigationBarHidden = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
     }
     
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         self.view.addSubview(instructionsButton)
         
         var submitButton = MenuButton(frame: CGRect(x:(self.view.frame.width-200)/2,y:self.view.frame.height/2+160,width:200,height:40))
-        submitButton.addTarget(self, action: Selector("instructionsButtonPressed:"), forControlEvents: .TouchUpInside)
+        submitButton.addTarget(self, action: Selector("submitButtonPressed:"), forControlEvents: .TouchUpInside)
         submitButton.setTitle("Submit Your Work", forState: .Normal)
         self.view.addSubview(submitButton)
         
@@ -62,16 +62,22 @@ class ViewController: UIViewController {
     
     func instructionsButtonPressed(sender: UIButton) {
         println("instructions tapped")
-        let vc = storyboard.instantiateViewControllerWithIdentifier("vcInstructions") as UINavigationController
+        let vc = storyboard!.instantiateViewControllerWithIdentifier("vcInstructions") as UINavigationController
         self.presentViewController(vc, animated: true, completion: nil)
   //  self.presentViewController(viewControllerToPresent: InstructionsViewController, animated: false, completion: nil)
     }
     
     func aboutButtonPressed(sender: UIButton) {
         println("about tapped")
-        let vc2 = storyboard.instantiateViewControllerWithIdentifier("vcAbout") as UINavigationController
+        let vc2 = storyboard!.instantiateViewControllerWithIdentifier("vcAbout") as UINavigationController
         self.presentViewController(vc2, animated: true, completion: nil)
         //  self.presentViewController(viewControllerToPresent: InstructionsViewController, animated: false, completion: nil)
+    }
+    
+    func submitButtonPressed(sender: UIButton) {
+        println("submit tapped")
+        let vc3 = storyboard!.instantiateViewControllerWithIdentifier("vcSubmit") as UINavigationController
+        self.presentViewController(vc3, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

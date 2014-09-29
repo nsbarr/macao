@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-class InsructionsViewController: UIViewController {
+class InstructionsViewController: UIViewController {
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+       // fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +30,7 @@ class InsructionsViewController: UIViewController {
     }
     
     
-    @IBOutlet var huh: UIBarButtonItem
+    @IBOutlet var huh: UIBarButtonItem!
     
 
     @IBAction func huh(sender: UIBarButtonItem) {
