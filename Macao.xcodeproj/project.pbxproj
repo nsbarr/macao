@@ -62,6 +62,8 @@
 /* Begin PBXFileReference section */
 		0109D7C919D9B859003DA7D8 /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		0109D7CB19D9C732003DA7D8 /* keaton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keaton2.png; sourceTree = "<group>"; };
+		0109D7DB19D9E34F003DA7D8 /* Prisoner's Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Prisoner's Keyboard.entitlements"; sourceTree = "<group>"; };
+		0109D7DC19D9E372003DA7D8 /* Macao.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Macao.entitlements; sourceTree = "<group>"; };
 		012C70F719719DE300F200F9 /* Macao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012C70FB19719DE300F200F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012C70FC19719DE300F200F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		012C70F919719DE300F200F9 /* Macao */ = {
 			isa = PBXGroup;
 			children = (
+				0109D7DC19D9E372003DA7D8 /* Macao.entitlements */,
 				01DD45F019D8C0300049416B /* prisoner.jpg */,
 				0196819219D5D971004953EB /* Main.storyboard */,
 				01DD45F619D8CE430049416B /* prisoner.png */,
@@ -179,6 +182,7 @@
 		012C711E19719DF000F200F9 /* Prisoner's Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0109D7DB19D9E34F003DA7D8 /* Prisoner's Keyboard.entitlements */,
 				012C71381971A32600F200F9 /* nextKeyboard.png */,
 				012C712119719DF000F200F9 /* KeyboardViewController.swift */,
 				016A980F197721E80079F59C /* backspace.png */,
@@ -266,6 +270,11 @@
 					012C70F619719DE300F200F9 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 3RA98GNA2A;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					012C710819719DE300F200F9 = {
 						CreatedOnToolsVersion = 6.0;
@@ -274,6 +283,11 @@
 					012C711C19719DF000F200F9 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 3RA98GNA2A;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -461,10 +475,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Macao/Macao.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Macao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -473,10 +491,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Macao/Macao.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Macao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -517,7 +539,9 @@
 		012C712919719DF000F200F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Prisoner's Keyboard/Prisoner's Keyboard.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -525,6 +549,7 @@
 				INFOPLIST_FILE = "Prisoner's Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -532,10 +557,13 @@
 		012C712A19719DF000F200F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Prisoner's Keyboard/Prisoner's Keyboard.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Prisoner's Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

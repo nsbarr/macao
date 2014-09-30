@@ -20,7 +20,7 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         
         var webview = UIWebView(frame: CGRect(x:0.0, y:0.0, width:self.view.frame.width, height:self.view.frame.height-0.0))
-        let url = "http://www.nsbarr.com/about"
+        let url = "https://medium.com/@nsbarr/in-2010-while-excavating-along-the-polish-russian-border-archaeologists-dug-up-a-tiny-scrap-of-456e7e8d4b2d"
         let nsurl = NSURL.URLWithString(url)
         let nsrequest = NSURLRequest(URL: nsurl)
         webview.loadRequest(nsrequest)

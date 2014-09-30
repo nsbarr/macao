@@ -11,12 +11,9 @@ import UIKit
 
 class KeyButton: UIButton {
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     
     override init(frame: CGRect)  {
+
         super.init(frame: frame)
         var buttonLabel = self.titleLabel!
         buttonLabel.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 26.0)
@@ -26,9 +23,11 @@ class KeyButton: UIButton {
         self.setTitleColor(UIColor.blackColor(), forState: .Selected)
         self.setTitleColor(UIColor.blackColor(), forState: .Selected | .Highlighted)
         buttonLabel.sizeToFit()
-        
+        //self.autoresizingMask = .FlexibleWidth | .FlexibleLeftMargin | .FlexibleRightMargin
+        self.autoresizingMask = .FlexibleLeftMargin | .FlexibleRightMargin
         self.layer.borderWidth = 0.5
-        self.layer.borderColor = UIColor.blackColor().CGColor
+       self.layer.borderColor = UIColor.blackColor().CGColor
+        //self.layer.borderColor = UIColor.whiteColor().CGColor
         self.layer.cornerRadius = 3
         
         self.backgroundColor = UIColor.blackColor()
@@ -36,5 +35,9 @@ class KeyButton: UIButton {
         self.contentHorizontalAlignment = .Center
     }
 
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
 
 }

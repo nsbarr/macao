@@ -18,9 +18,11 @@ class KeyboardViewController: UIInputViewController {
     
     
     let topPadding: CGFloat = 12
-    let bottomPadding: CGFloat = 8
-    let keyHeight: CGFloat = 40
-    let keyWidth: CGFloat = 30
+    let bottomPadding: CGFloat = 4
+    var keyHeight: CGFloat = 0
+    var keyWidth: CGFloat = 0 //we're gonna change this when we do the view
+    var kbWidth: CGFloat = 0
+    var kbHeight: CGFloat = 0
     let keySpacing: CGFloat = 2
     let rowSpacing: CGFloat = 15
     let editKeyWidth: CGFloat = 45
@@ -46,32 +48,44 @@ class KeyboardViewController: UIInputViewController {
     
     
     
-   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-       super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-   
-   }
+//   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+//       super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//   
+//   }
 
-   required init(coder aDecoder: NSCoder) {
-       fatalError("init(coder:) has not been implemented")
-   }
-
-    
     override func updateViewConstraints() {
         super.updateViewConstraints()
         
         // Add custom view sizing constraints here
     }
     
-    override func loadView() {
-        self.view = UIView(frame: UIScreen.mainScreen().applicationFrame)
+//    override func loadView() {
+//        
+//        println(UIDevice.currentDevice().model)
+//            }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        println(self.view.frame)
+        //5 v = (0.0,0.0,320.0,216.0)
+        //6 v = (0.0,0.0,375.0,216.0)
+        
+        kbWidth = self.view.frame.width
+        kbHeight = self.view.frame.height
+        keyWidth = (kbWidth - (keySpacing*11))/10
+        keyHeight = (kbHeight - (rowSpacing*4))/4 //iphone 5 & vertical (0.0,20.0,320.0,548.0)
+        self.presentKeys()
+
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func presentKeys(){
         var width = self.view.frame.size.width
         
         
-        editKey = KeyButton(frame: CGRect(x: 2.0, y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth, height:editKeyHeight))
+        
+        
+        
+        editKey = KeyButton(frame: CGRect(x: 2.0, y: kbHeight-(editKeyHeight+bottomPadding), width:editKeyWidth, height:editKeyHeight))
         editKey!.addTarget(self, action: Selector("editKeyPressed:"), forControlEvents: .TouchUpInside)
         editKey!.selected = false
         editKey!.setTitle("🔒", forState: .Normal)
@@ -80,10 +94,10 @@ class KeyboardViewController: UIInputViewController {
         editKey!.backgroundColor = specialKeyBackGroundColorLight
         self.view.addSubview(editKey!)
         //[myButton setBackgroundImage:[self imageWithColor:[UIColor greenColor]] forState:UIControlStateHighlighted];
-
         
         
-        nextKeyboardKey = KeyButton(frame: CGRect(x: CGFloat(2.0 + (editKeyWidth + keySpacing)), y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth, height:editKeyHeight))
+        
+        nextKeyboardKey = KeyButton(frame: CGRect(x: CGFloat(2.0 + (editKeyWidth + keySpacing)), y: kbHeight-(editKeyHeight+bottomPadding), width:editKeyWidth, height:editKeyHeight))
         nextKeyboardKey!.addTarget(self, action: Selector("advanceToNextInputMode"), forControlEvents: .TouchUpInside)
         nextKeyboardKey!.selected = false
         //nextKeyboardKey!.setImage(UIImage(named:"nextKeyboard.png"), forState: .Normal)
@@ -94,7 +108,7 @@ class KeyboardViewController: UIInputViewController {
         self.view.addSubview(nextKeyboardKey!)
         
         
-        spaceKey = KeyButton(frame: CGRect(x: CGFloat(10.0 + ((editKeyWidth + keySpacing) * 2)), y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth * 2.5, height:editKeyHeight))
+        spaceKey = KeyButton(frame: CGRect(x: editKeyWidth*2 + keySpacing*3, y: kbHeight-(editKeyHeight+bottomPadding), width:kbWidth-(editKeyWidth*4 + keySpacing*6), height:editKeyHeight))
         spaceKey!.addTarget(self, action: Selector("spaceKeyPressed:"), forControlEvents: .TouchUpInside)
         spaceKey!.selected = false
         spaceKey!.setTitle("", forState: .Normal)
@@ -104,7 +118,7 @@ class KeyboardViewController: UIInputViewController {
         
         
         
-        backspaceKey = KeyButton(frame: CGRect(x: CGFloat(width - (editKeyWidth + keySpacing) * 2), y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth, height:editKeyHeight))
+        backspaceKey = KeyButton(frame: CGRect(x: CGFloat(width - (editKeyWidth + keySpacing) * 2), y: kbHeight-(editKeyHeight+bottomPadding), width:editKeyWidth, height:editKeyHeight))
         backspaceKey!.addTarget(self, action: Selector("backspaceKeyPressed:"), forControlEvents: .TouchUpInside)
         backspaceKey!.selected = false
         backspaceKey!.setImage(UIImage(named:"backspace.png"), forState: .Normal)
@@ -113,7 +127,7 @@ class KeyboardViewController: UIInputViewController {
         backspaceKey!.titleLabel!.font = UIFont(name: "Apple Symbols", size: 20.0)
         self.view.addSubview(backspaceKey!)
         
-        returnKey = KeyButton(frame: CGRect(x: CGFloat(width - (editKeyWidth + keySpacing)), y: CGFloat(topPadding + (keyHeight + rowSpacing) * 3), width:editKeyWidth, height:editKeyHeight))
+        returnKey = KeyButton(frame: CGRect(x: CGFloat(width - (editKeyWidth + keySpacing)), y: kbHeight-(editKeyHeight+bottomPadding), width:editKeyWidth, height:editKeyHeight))
         returnKey!.addTarget(self, action: Selector("returnKeyPressed:"), forControlEvents: .TouchUpInside)
         returnKey!.selected = false
         returnKey!.setTitle("⏎", forState: .Normal)
@@ -134,25 +148,37 @@ class KeyboardViewController: UIInputViewController {
         //        self.view.addSubview(border)
         
         var y: CGFloat = topPadding
+        var x: CGFloat
+        
         
         for row in rows {
             var width = self.view.frame.size.width
-            var x: CGFloat = (width - (CGFloat(row.count) - 1.0) * (keySpacing + keyWidth) - keyWidth) / 2.0
-            
+            x = (width - (CGFloat(row.count) - 1.0) * (keySpacing + keyWidth) - keyWidth) / 2.0
             for label in row {
-                let button = KeyButton(frame: CGRect(x: x, y: y, width: keyWidth, height: keyHeight))
+                var button = KeyButton(frame: CGRect(x: x, y: y, width: keyWidth, height: keyHeight))
                 button.setTitle(label.uppercaseString, forState: .Normal)
                 button.setTitle(label.uppercaseString, forState: .Highlighted)
                 button.addTarget(self, action: Selector("keyPressed:"), forControlEvents: UIControlEvents.TouchUpInside)
-                button.autoresizingMask = .FlexibleWidth | .FlexibleLeftMargin | .FlexibleRightMargin
+                //button.autoresizingMask = .FlexibleWidth | .FlexibleLeftMargin | .FlexibleRightMargin
                 button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 0)
                 
                 self.view.addSubview(button)
                 buttons.append(button)
-                x += keyWidth + keySpacing
+                x = x + keyWidth + keySpacing
             }
-            y += keyHeight + rowSpacing
+            y = y + keyHeight + rowSpacing
         }
+
+    }
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       // self.view = UIView(frame: UIScreen.mainScreen().applicationFrame)
+        
+        
+        
         
     }
     
@@ -180,12 +206,13 @@ class KeyboardViewController: UIInputViewController {
         
     }
     
+    
     func editKeyPressed(sender: UIButton) {
         editKey!.selected = !editKey!.selected
         if (editKey!.selected) {
             self.view.bringSubviewToFront(editKey!)
             editKey!.titleLabel!.font = UIFont(name: "Avenir", size: 14.0)
-            editKey!.frame.size.width = self.view.frame.size.width - 2
+            editKey!.frame.size.width = kbWidth - keySpacing*2
             for button in buttons {
                 button.setTitleColor(UIColor.grayColor(), forState: .Selected)
                 button.setTitleColor(UIColor.grayColor(), forState: .Selected | .Highlighted)
@@ -218,6 +245,18 @@ class KeyboardViewController: UIInputViewController {
     func returnKeyPressed(sender: UIButton) {
         var proxy = self.textDocumentProxy as UITextDocumentProxy
         proxy.insertText("\n")
+    }
+    
+    override func viewDidLayoutSubviews(){
+        
+        var kbHeight = self.view.frame.size.height
+        
+        var kbWidth = self.view.frame.size.width
+        
+     //   println(kbHeight)
+     //   println(kbWidth)
+        
+        
     }
     
 }
